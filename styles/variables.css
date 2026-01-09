@@ -2,3 +2,24 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+@font-face {
+    src: url(../fonts/IBMPlexMono-Regular.woff);
+    font-family: 'IBMPlexMono-Regular'; 
+}
+
+@font-face {
+    src: url(../fonts/IBMPlexMono-Bold.woff);
+    font-family: 'IBMPlexMono-Bold'; 
+}
+
+:root {
+  --bg-img: url("../images/cover-image-dark.png");
+  --font-regular: 'IBMPlexMono-Regular';
+  --font-bold: 'IBMPlexMono-Bold';
+  --accent-color: #FF0070;
+  --accent-color-tinned: #FF007066;
+  --main-color: #000028;
+  --paragraph-text-color: #F1B2CE;
+  --heading-text-color: #DB00FF;
+}
