@@ -5,12 +5,12 @@
 
 @font-face {
     src: url(../fonts/IBMPlexMono-Regular.woff);
-    font-family: 'IBMPlexMono-Regular'; 
+    font-family: 'IBMPlexMono-Regular';
 }
 
 @font-face {
     src: url(../fonts/IBMPlexMono-Bold.woff);
-    font-family: 'IBMPlexMono-Bold'; 
+    font-family: 'IBMPlexMono-Bold';
 }
 
 :root {
