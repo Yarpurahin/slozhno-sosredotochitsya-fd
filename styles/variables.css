@@ -2,17 +2,6 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
-
-@font-face {
-    src: url(../fonts/IBMPlexMono-Regular.woff);
-    font-family: 'IBMPlexMono-Regular';
-}
-
-@font-face {
-    src: url(../fonts/IBMPlexMono-Bold.woff);
-    font-family: 'IBMPlexMono-Bold';
-}
-
 :root {
   --bg-img: url("../images/cover-image-dark.png");
   --font-regular: 'IBMPlexMono-Regular';

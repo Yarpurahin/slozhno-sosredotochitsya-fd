@@ -27,7 +27,7 @@
 
 .decorative-text {
   display: flex;
-  font-family: var(--font-regular);
+  font-family: var(--font-regular), monospace;
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
@@ -70,11 +70,20 @@
   border-bottom: 1px solid var(--accent-color);
 }
 
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--accent-color-tinned);
+}
+
 .header__theme-menu-button {
   display: grid;
   inline-size: 70px;
   block-size: 26px;
-  font-family: var(--font-regular), serif;
+  font-family: var(--font-regular), monospace;
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
@@ -91,12 +100,60 @@
   margin-inline-start: 10px;
   margin-inline-end: 20px;
   margin-block-start: 8px;
-  font-family: var(--font-bold), serif;
+  font-family: var(--font-bold), monospace;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
   color: var(--heading-text-color);
   text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+  align-self: end;
+  margin: 10px;
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  justify-self: end;
+  margin: 10px;
+}
+
+.title-decor {
+  color: var(--main-color);
+  background-color: var(--accent-color);
+  font-family: var(--font-bold), monospace;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+@media (width >= 768px) {
+  
+  .decorated-zone::before {
+    content: '';
+    margin: 20px;
+  }
+
+  .decorated-zone::after {
+    content: '';
+    margin: 20px;
+  }
 }
 
 .title {
@@ -108,11 +165,18 @@
   block-size: 117px;
 }
 
+main {
+  background-color: var(--main-color);
+  font-family: var(--font-regular), monospace;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
 .main-section-unit {
   padding-block-end: 30px;
   padding-inline-start: 10px;
   padding-inline-end: 10px;
-  background-color: var(--main-color);
 }
 
 .main-section-unit:last-of-type {
@@ -129,10 +193,9 @@
 
 .main-section-unit__heading {
   display: grid;
-  font-family: var(--font-bold);
+  font-family: var(--font-bold), monospace;
   font-weight: 700;
   font-size: 18px;
-  line-height: 23.4px;
   color: var(--accent-color);
 }
 
@@ -141,10 +204,6 @@
 }
 
 .main-section-unit__paragraph {
-  font-family: var(--font-regular);
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 23.4px;
   color: var(--paragraph-text-color);
   margin-block-start: 10px;
   margin-block-end: 20px;
@@ -156,18 +215,16 @@
 }
 
 .link:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  outline: none;
+  border-bottom: 1px solid var(--paragraph-text-color);
 }
 
 .link:focus-visible {
   outline: 1px solid var(--paragraph-text-color);
 }
 
-.main-section-unit__paragraph-heading-alternative {
-  font-family: var(--font-regular);
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 23.4px;
+.alternative-heading {
   color: var(--main-color);
   background-color: var(--accent-color);
   margin-top: 20px;
@@ -223,7 +280,7 @@
 .footer-heading {
   display: grid;
   align-self: center;
-  font-family: var(--font-bold);
+  font-family: var(--font-bold), monospace;
   font-weight: 700;
   font-size: 116px;
   line-height: 83%;
@@ -288,7 +345,7 @@
     margin-block-end: 20px;
   }
 
-  .text-zone-columns {
+  .what-lowers-concentration {
     margin-inline-start: 0;
     margin-bottom: -19px;
   }
@@ -382,7 +439,7 @@
 
   .title {
     inline-size: 491px;
-    block-size: 71px;
+    block-size: min-content;
   }
 
   .main-section-unit {
@@ -391,7 +448,6 @@
 
   .main-section-unit__heading {
     inline-size: 315px;
-    block-size: 47px;
     grid-column: 1;
     grid-row: 1;
   }
@@ -400,7 +456,7 @@
     grid-template-columns: 1fr;
   }
 
-  .text-zone-columns {
+  .what-lowers-concentration {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-row: 2;
@@ -415,7 +471,7 @@
 
   .footer-heading {
     font-weight: 700;
-    font-size: 157px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     line-height: 83%;
   }
 
